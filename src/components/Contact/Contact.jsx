@@ -3,18 +3,45 @@ import './Contact.css';
 import call from '../../../src/assets/call_icon.svg';
 import mail from '../../../src/assets/mail_icon.svg';
 import location from '../../../src/assets/location_icon.svg';
+
 function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission here, e.g., send data to a server
-    alert('Form submitted', { name, email, message });
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    const formData = {
+      access_key: "2cb6f1cd-a87f-4fcf-abc5-ebaad7d0d840",
+      name,
+      email,
+      message,
+    };
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const response = await res.json();
+
+      if (response.success) {
+        alert("Form submitted successfully!");
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        alert("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -32,24 +59,22 @@ function Contact() {
             <ul>
               <li>
                 <a href="mailto:patelarpit2580@gmail.com">
-                  <img src={mail} alt="Email Icon" class="icon" /> patelarpit2580@gmail.com
+                  <img src={mail} alt="Email Icon" className="icon" /> patelarpit2580@gmail.com
                 </a>
               </li>
               <li>
                 <a href="tel:+919981886039">
-                  <img src={call} alt="Phone Icon" class="icon" /> +91-9981-886-039
+                  <img src={call} alt="Phone Icon" className="icon" /> +91-9981-886-039
                 </a>
               </li>
               <li>
-                <img src={location} alt="Location Icon" class="icon" /> INDIA, Asia
+                <img src={location} alt="Location Icon" className="icon" /> INDIA, Asia
               </li>
             </ul>
-
           </div>
         </div>
         <div className="right">
-
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" onSubmit={onSubmit}>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
               <input

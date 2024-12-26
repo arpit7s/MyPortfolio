@@ -9,7 +9,7 @@ import Services from './components/MyServices/Services';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home'); // Track active section
+  const [activeSection, setActiveSection] = useState('home'); 
 
   return (
     <div className="App">
