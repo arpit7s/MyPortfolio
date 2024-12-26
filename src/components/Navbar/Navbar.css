@@ -1,0 +1,163 @@
+.navbar {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 8px 5%;
+  position: fixed;
+  width: 90%;
+  height: 60px;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(56, 54, 54);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo .accent {
+  color: #ff00ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+  display: block;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #ff00ff;
+  border-bottom: 3px solid #ff00ff;
+}
+
+.connect-button {
+  margin-left: auto;
+}
+
+.connect-button .btn-connect {
+  background: linear-gradient(90deg, #ff00ff, #ff6600);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.connect-button .btn-connect:hover {
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    align-items: flex-start; /* Align to the left */
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 10px 5%;
+  }
+
+  .connect-button {
+    margin-right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    color: #ff00ff;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    padding-left: 20px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 14px; 
+  }
+
+  .connect-button .btn-connect {
+    padding: 8px 16px; 
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 20px; 
+  }
+}
+
+@media (max-width: 200px) {
+  .nav-links {
+    padding-left: 10px;
+  }
+
+  .nav-links a {
+    font-size: 12px; 
+  }
+
+  .connect-button .btn-connect {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    font-size: 24px; 
+  }
+}

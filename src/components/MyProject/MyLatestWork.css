@@ -1,0 +1,147 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.card-content h3 {
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.card:hover {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ee0979;
+}
+
+.get-more-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00ff, #ff6600);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.get-more-btn:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    transform: scale(1.1);
+}
+
+.card-content .links {
+    margin-top: 10px;
+}
+
+.card-content .links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #4db8ff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-content .links a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .get-more-btn {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .get-more-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff9800;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.lowercase {
+  text-transform: lowercase;
+  background: linear-gradient(45deg, #f06, #f90);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.uppercase {
+  background: linear-gradient(45deg, #f06, #f90);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.highlight {
+  text-transform: capitalize;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f06, #f90);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text {
+  text-transform: lowercase;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect {
+  background: linear-gradient(90deg, #ff00ff, #ff6600);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.connect:hover {
+ color:#fff;
+}
+
+.resume {
+  background-color: transparent;
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+.resume:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
