@@ -18,7 +18,7 @@ const About = () => {
           </div>
           <div className="right">
             <div className="content-section">
-              <p>
+              <p id="desc">
                 My passion for frontend development is not only reflected in my
                 extensive experience but also in the enthusiasm and dedication I bring
                 to each project.

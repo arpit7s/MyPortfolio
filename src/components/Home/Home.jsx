@@ -16,7 +16,7 @@ function Home() {
           <span class="text">frontend developer based in </span><span class="highlight">INDIA</span>.
         </h1>
 
-        <p>
+        <p id="desc">
           As a fresher, I’m excited to apply my skills to real-world projects
           and contribute to creating dynamic web experiences. I am always eager
           to learn new technologies and techniques to improve my development skills.

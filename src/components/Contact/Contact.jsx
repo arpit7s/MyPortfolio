@@ -12,6 +12,9 @@ function Contact() {
     event.preventDefault();
     // Handle form submission here, e.g., send data to a server
     alert('Form submitted', { name, email, message });
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
