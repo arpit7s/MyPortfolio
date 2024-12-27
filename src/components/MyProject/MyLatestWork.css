@@ -21,7 +21,7 @@
 
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -33,6 +33,16 @@
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
+
+.work-grid a {
+    text-decoration: none;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .card img {
     width: 100%;
@@ -61,10 +71,11 @@
 }
 
 .card:hover {
-    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    background: linear-gradient(45deg,  #00c6ff, #0072ff);
     transform: translateY(-8px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ee0979;
+    border: 2px solid white;
+    
 }
 
 .get-more-btn {
@@ -101,7 +112,7 @@
 
 .card-content .links a:hover {
     text-decoration: underline;
-    color: #007bff;
+    color: rgba(64, 71, 65, 0.363);
 }
 
 @media screen and (max-width: 768px) {
