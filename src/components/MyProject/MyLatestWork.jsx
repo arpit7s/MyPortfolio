@@ -1,9 +1,9 @@
 import React from 'react';
 import './MyLatestWork.css';
 import quote from "../../../src/assets/quote.jpeg";
-import resume from "../../../src/assets/resume.jpeg";
+import resume from "../../../src/assets/resume.png";
 import whether from "../../../src/assets/whether.jpeg";
-import task from "../../../src/assets/task_manager.jpeg";
+import task from "../../../src/assets/task.png";
 import timer from "../../../src/assets/timer.png";
 import spotify from "../../../src/assets/spotify.png";
 const MyLatestWork = () => {
