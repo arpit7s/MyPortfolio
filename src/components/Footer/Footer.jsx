@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="footer-content">
-                    <p> Copyright &copy; 2024 Arpit Patel. All rights reserved.</p>
+                    <p> Copyright &copy; 2025 Arpit Patel. All rights reserved.</p>
                     <ul className="footer-links">
                         <li>
                             <a href="#">Terms of Services</a>
