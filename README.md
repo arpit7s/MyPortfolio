@@ -30,7 +30,8 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/portfolio.git
+    git clone https://github.com/arpit7s/MyPortfolio.git
+    
     cd portfolio
     ```
 
